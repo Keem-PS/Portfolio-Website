@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth focus:scroll-auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+<body class="font-poppins text-dark">
+
+    <nav class="w-full relative">
+
+        <div class="flex justify-between items-center p-6 sm:items-center sm:container sm:mx-auto  ">
+            <a href="#home"><h1 class="text-2xl">Keem Dev.</h1></a>
+            <button id="hamberg" class="sm:hidden ">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div id="nav-desktop" class="hidden sm:flex space-x-4 font-normal">
+                    <a href="#home" class="underline-hover hover-icon">Home</a>
+                    <a href="#about" class="underline-hover hover-icon">About</a>
+                    <a href="#projects" class="underline-hover hover-icon">Projects</a>
+                    <a href="#certs" class="underline-hover hover-icon">Certs</a>
+                    <a href="#contact" class="underline-hover hover-icon">Contact</a>
+            </div>
+        </div>
+        <div id="nav-mobile" class="hidden text-white text-center rounded-lg p-4 absolute w-40 top-16 bg-granite right-0 sm:hidden">
+            <ul class="space-y-4">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certs">Certs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <header class="mt-1 h-lvh sm:h-hero sm:flex sm:items-center">
+        <div class="container mx-auto p-4 sm:flex sm:justify-center sm:gap-4 sm:justify-items-center sm:top-0 ">
+            <div class="flex justify-center ">
+                <img src="./src/img/me2.png" alt="" class="rounded-full size-80">
+            </div>
+            <div class="flex flex-col justify-center text-center items-center sm:order-first">
+                <div class="mt-8">
+                    <h1 class="text-sm">Hello, I'm </h1>
+                    <h1 class="text-3xl font-semibold">Peerawit Sonpong</h1>
+                </div>
+                <button class="my-4 p-4 border border-granite rounded-full w-48 text-granite  transition duration-500 ease-in-out hover:bg-granite hover:text-white hover:-translate-y-1 hover:scale-110">
+                    Download Resume 
+                </button>
+                <div class="text-xl space-x-2">
+                    <a href="https://github.com/Keem-PS" ><i class="fa-brands fa-github hover-icon" ></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook hover-icon"></i></a>
+                    <a href="https://www.instagram.com/keemp.s/"><i class="fa-brands fa-square-instagram hover-icon"></i></a>
+                    <a href="https://www.linkedin.com/in/peerawit-sonpong-750910326/"><i class="fa-brands fa-linkedin hover-icon"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <section id="about" class="sm:h-hero">
+        <h1 class="text-center text-sm">Get To Know More</h1>
+        <h1 class="text-3xl font-semibold text-center">About Me</h1>
+
+        <div class="container mx-auto p-4 justify-center items-center sm:grid sm:grid-cols-12 sm:justify-center sm:items-center ">
+            <div class="sm:col-span-3 flex items-center justify-center">
+                <img src="./src/img/S__4104200.png" alt="" class="size-80 rounded-full">
+            </div>
+            <div class="sm:col-span-9 mt-4">
+                <div class=" flex flex-wrap justify-center items-center sm:flex sm:justify-start gap-4">
+                    <button id="aboutBtn" class="text-lg text-white bg-granite p-2 rounded-lg hover-icon"  onclick="showSection('aboutMe')" ><i class="fa-solid fa-person"></i> About</button>
+                    <button id="educationBtn" class="text-lg text-white bg-granite p-2 rounded-lg hover-icon"  onclick="showSection('education')"><i class="fa-solid fa-award"></i> Education</button>
+                    <button id="workBtn" class="text-lg text-white bg-granite p-2 rounded-lg hover-icon"  onclick="showSection('workExperience')"><i class="fa-solid fa-briefcase"></i> Work Experience</button>
+                </div>
+                <div class="mt-4">
+                    <hr>
+                </div>
+
+    
+                <div id="aboutMe" class="mt-4 section-about">
+                    <div class=" mt-4 p-4 border border-granite rounded-lg">
+                        <p>A dedicated professional with 4 years of experience in IT infrastructure and strong skills in JavaScript, TypeScript, and Front-end development. Proficient in cloud platforms (AWS, GCP), server management (Windows, Linux), and scripting. Eager to transition into a Front-end Developer role to apply my technical expertise and passion for web development in creating dynamic and user-friendly applications.</p>
+                    </div>
+
+                </div>
+
+                 <!-- Education Section -->
+                <div id="education" class="mt-4 section-about hidden">
+                    <h3 class="font-semibold text-lg">Education</h3>
+                    <div class=" mt-4 p-4 border border-granite rounded-lg">
+                        <h1 class="font-semibold">Rajamangara University Technology Phra Nakhon</h1>
+                        <p class="italic text-xs">2016 - 2019</p>
+                        <ul class="mt-4">
+                            <li>Bachelor Degree, Faculty of Computer Science</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+  
+                <!-- Work Experience Section -->
+                <div id="workExperience" class="mt-4 section-about hidden">
+                    <h3 class="font-semibold text-lg">Work Experience</h3>
+                    <div class="mt-4 p-4 border border-granite rounded-lg ">
+                        <h4 class="font-semibold">LEARN Corporation Public Co., Ltd.</h4>
+                        <h5 class="italic text-xs">October 2023 – April 2024</h5>
+                        <h4>Postition : IT Infrastructure Engineer</h4>
+                    </div>
+
+                    <div class="mt-4 p-4 border border-granite rounded-lg ">
+                        <h4 class="font-semibold">G-Able Co., Ltd.</h4>
+                        <h5 class="italic text-xs">April 2021 – August 2023</h5>
+                        <h4>Postition : System Engineer</h4>
+                    </div>
+
+                    <div class="mt-4 p-4 border border-granite rounded-lg ">
+                        <h4 class="font-semibold">NTT Solutions (Thailand) Limited.</h4>
+                        <h5 class="italic text-xs">April 2020 - March 2021</h5>
+                        <h4>Postition : System Administrator</h4>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="mt-10 sm:h-hero">
+        <h1 class="text-center text-sm mt-4">Browse My Recent</h1>
+        <h1 class="text-3xl font-semibold text-center">Projects</h1>
+
+        <div class="container mx-auto p-4">
+        <hr>
+        <div class="mt-4 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+            <!-- Project 1 -->
+            <div class="bg-white shadow-md rounded-lg p-6 w-full sm:w-1/3 flex flex-col items-center">
+              <img src="./src/img/desktop1.png" alt="" class="w-full h-48 object-cover rounded"/>
+              <h3 class="text-xl font-semibold mt-4">Website E-commerce</h3>
+              <p class="mb-4">Tools : HTML, CSS, JavaScript.</p>
+            <div class="flex justify-center items-center gap-2">
+                <a href="https://github.com/Keem-PS/Keem-PS.github.io" class="bg-granite text-sm p-2 text-white  rounded-lg hover-icon">View on GitHub</a>
+                <a href="https://keem-ps.github.io/" class="border border-granite text-sm p-2 text-granite rounded-lg hover-icon">Live Demo</a>
+            </div>
+
+            </div>
+  
+            <!-- Project 2 -->
+            <div class="bg-white shadow-md rounded-lg p-6 w-full sm:w-1/3 flex flex-col items-center">
+              <img src="./src/img/desktop2.png" alt="" class="w-full h-48 object-cover rounded mb-4"/>
+              <h3 class="text-xl font-semibold mb-2">Website Calcurate Calorie</h3>
+              <p class="mb-4">Tools : HTML, CSS, JavaScript.</p>
+              <a href="https://github.com/Keem-PS/project-calcurate-calorie" class="bg-granite text-sm p-2 text-white  rounded-lg hover-icon">View on GitHub</a>
+            </div>
+  
+            <!-- Project 3 -->
+            <div class="bg-white shadow-md rounded-lg p-6 w-full sm:w-1/3 flex flex-col items-center">
+                <img src="project1.jpg" alt="Project 1 Image" class="w-full h-48 object-cover rounded mb-4"/>
+                <h3 class="text-xl font-semibold mb-2">Web App Courses online</h3>
+                <p class="mb-4">Tools : ReactJS, Tailwind CSS</p>
+                <a href="https://github.com/Keem-PS/App-courses-online_with-React" class="bg-granite text-sm p-2 text-white  rounded-lg hover-icon">View on GitHub</a>
+              </div>
+          </div>
+
+        </div>
+    </section>
+
+    <section id="certs" class="mt-10 sm:h-hero">
+        <h1 class="text-center text-sm">Browse My all</h1>
+        <h1 class="text-3xl font-semibold text-center">Certificates</h1>
+        <div class="container mx-auto p-4 ">
+            <hr>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <img src="./src/img/cert/borntodev-academy_Introduction to JavaScript_certificate.png" alt="" class="w-full h-48 sm:h-72 object-cover rounded shadow-lg cursor-pointer"/>
+                <img src="./src/img/cert/borntodev-acdemy_Essential SQL for Everyone_certifiacte.png" alt="" class="w-full h-48 sm:h-72 object-cover rounded shadow-lg cursor-pointer"/>
+                <img src="./src/img/cert/borntodev-acdemy_GitHub for Developer _certifiacte.png" alt="" class="w-full h-48 sm:h-72 object-cover rounded shadow-lg cursor-pointer"/>
+                <img src="./src/img/cert/certificate.png" alt="" class="w-full h-48 sm:h-72 object-cover rounded shadow-lg cursor-pointer"/>
+                <img src="./src/img/cert/studio.jpg" alt="" class="w-full h-48 sm:h-72 object-cover rounded shadow-lg cursor-pointer"/>
+            </div>
+        <hr>
+
+        </div>
+    </section>
+
+    <section id="contact" class=" mt-10 h-lvh sm:h-hero">
+        <h1 class="text-center text-sm">Get In Touch</h1>
+        <h1 class="text-3xl font-semibold text-center">Contact Me</h1>
+        <div class="container mx-auto p-4">
+        <hr>
+            <div class="border border-granite text-center p-4 rounded-lg">
+                <i class="fa-solid fa-envelope"></i> peerawit103@gmail.com
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="text-center">
+            <h1 class="text-granite text-xs p-4">Copyright &copy; 2024 Peerawit Sonpong. All Rights Reserved</h1>
+        </div>
+    </footer>
+
+
+    <script>
+        // function click show menu mobile
+        const hamberg = document.getElementById('hamberg');
+        const navMobile = document.getElementById('nav-mobile');
+
+        hamberg.addEventListener('click', ()=> {
+            navMobile.classList.toggle('hidden');
+        });
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll(".section-about").forEach((section) => {
+              section.classList.add("hidden");
+            });
+    
+            // Show the selected section
+            document.getElementById(sectionId).classList.remove("hidden");
+          }
+
+
+    </script>
+</body>
+</html>
